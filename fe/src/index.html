@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>SampleBox Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link href="./output.css" rel="stylesheet"> -->
+</head>
+<body class="bg-black text-white min-h-screen flex items-center justify-center p-4">
+    <div class="max-w-4xl w-full">
+        <div class="flex flex-col md:flex-row items-center gap-8">
+            <div class="w-full md:w-1/2">
+                <img src="samplebox.png" alt="SampleBox" class="w-full h-auto">
+            </div>
+            <div class="w-full md:w-1/2 space-y-6">
+                <h1 class="text-4xl font-bold">SampleBox</h1>
+                <p class="text-lg">Get inspired with creative sample ideas!</p>
+                <p class="text-sm text-gray-400">Generate stems, a drum kit, melody and creative samples out of any song.</p>
+                
+                <div class="space-y-4">
+                    <button id="generateBtn" class="w-full bg-white text-black font-bold py-3 px-6 rounded-full hover:bg-gray-200 transition duration-300">
+                        Upload
+                    </button>
+                    <button id="browseSamplesBtn" class="w-full bg-transparent border border-white text-white font-bold py-3 px-6 rounded-full hover:bg-white hover:text-black transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
+                        Browse
+                    </button>
+                </div>
+                
+                <input type="file" id="songInput" accept=".mp3,.wav" class="hidden">
+                <div id="result" class="mt-4"></div>
+            </div>
+        </div>
+    </div>
+    <script src="renderer.js"></script>
+</body>
+</html>
